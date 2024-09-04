@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.game-populer span:after {
+  background-color: #320050;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  transform-origin: 100% 0;
+  transform: skew(25deg);
+}
+
+@layer utilities {
+  .max-container {
+    @apply max-w-[1400px] mx-auto;
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-12 min-[1680px]:px-0 w-full;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .transisi {
+    @apply transition-all ease-in;
+  }
+}
