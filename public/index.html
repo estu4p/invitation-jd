@@ -12,7 +12,7 @@
     />
     <title>Judi Online</title>
   </head>
-  <body class="bg-navBackground">
+  <body class="bg-navBackground relative">
     <!-- navbar -->
     <nav class="max-container">
       <div class="flexCenter p-[10px] relative h-[65px]">
@@ -68,14 +68,14 @@
         alt="image hero"
         class="h-auto w-full"
       />
-      <div class="flexCenter h-[46px]">
+      <div class="flex h-[46px]">
         <button
-          class="bg-gradient-to-t from-[#26013f] to-[#3f0279] text-white py-[14px] px-5 text-lg w-full"
+          class="bg-gradient-to-t from-[#26013f] to-[#3f0279] text-white text-lg w-full"
         >
           <a href="/">Daftar</a>
         </button>
         <button
-          class="bg-[#696969] bg-gradient-to-b from-[#6a6a6a] to-[#464646] text-white py-[14px] px-5 text-lg w-full"
+          class="bg-[#696969] bg-gradient-to-b from-[#6a6a6a] to-[#464646] text-white text-lg w-full"
         >
           <a href="/">Masuk</a>
         </button>
@@ -95,9 +95,27 @@
             alt=""
             class="max-w-[500px] w-[calc(100%-20px)]"
           />
-          <span class="text-white text-[26px] font-medium absolute"
+          <span
+            class="text-gray-400 text-[26px] font-medium absolute font-maximus tracking-[0.2em]"
             >IDR 9.000.000.000</span
           >
+        </div>
+      </div>
+    </section>
+    <!-- pengumuman -->
+    <section
+      id="pengumuman"
+      class="hidden z-50 top-[60px] left-1/2 transform -translate-x-1/2 opacity-0 transition-all duration-500 ease-in"
+    >
+      <div
+        class="bg-ungguPengumuman shadow-pengumuman border border-secondary rounded-[4px] w-[350px] text-center py-1 flex"
+      >
+        <img src="assets/images/DANA.png" alt="" class="w-14 h-14" />
+        <div class="text-secondary text-sm flex flex-col">
+          <span class="uppercase font-extrabold">selamat kepada</span>
+          <span class="">
+            my****3 Telah Melakukan WD di NEWYAM88 Sebesar Rp 1.000.000
+          </span>
         </div>
       </div>
     </section>
@@ -105,7 +123,7 @@
     <section class="max-container padding-container bg-triBackground">
       <div class="flex justify-center py-[10px]">
         <div
-          class="flexEnd text-center flex-col cursor-pointer hover:bg-secBackground hover:border-2 rounded-md border-unggu transisi"
+          class="flexEnd text-center flex-col cursor-pointer hover:bg-secBackground hover:border-2 rounded-md border-unggu transisi box-border"
         >
           <span
             class="material-symbols-outlined !text-[30px] text-iconColor my-[10px] mx-[27.5px]"
@@ -257,4 +275,26 @@
       </div>
     </section>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const pengumuman = document.getElementById("pengumuman");
+
+      setInterval(function () {
+        if (pengumuman.classList.contains("hidden")) {
+          pengumuman.classList.remove("hidden");
+          setTimeout(function () {
+            pengumuman.classList.add("opacity-100");
+            pengumuman.classList.add("absolute");
+            pengumuman.classList.remove("opacity-0");
+          }, 10);
+        } else {
+          pengumuman.classList.add("opacity-0");
+          pengumuman.classList.remove("opacity-100");
+          setTimeout(function () {
+            pengumuman.classList.add("hidden");
+          }, 400);
+        }
+      }, 4000);
+    });
+  </script>
 </html>

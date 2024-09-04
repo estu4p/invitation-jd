@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "maximus";
+  src: url("../assets/fonts/MaximusBT.ttf");
+}
+
 .game-populer span:after {
   background-color: #320050;
   content: "";
