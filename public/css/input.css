@@ -19,6 +19,22 @@
   transform: skew(25deg);
 }
 
+.server-gradient {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0.5px 0.5px 0 #fde347, -0.5px -0.5px 0 #fd9409,
+    0.5px -0.5px 0 #fde347, -0.5px 0.5px 0 #fd9409;
+}
+
+.server-gray {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0.5px 0.5px 0 white, -0.5px -0.5px 0 white, 0.5px -0.5px 0 white,
+    -0.5px 0.5px 0 white;
+}
+
 @layer utilities {
   .max-container {
     @apply max-w-[1400px] mx-auto;
@@ -46,5 +62,9 @@
 
   .transisi {
     @apply transition-all ease-in;
+  }
+
+  .text-server-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-b from-[#fde347] to-[#fd9409];
   }
 }

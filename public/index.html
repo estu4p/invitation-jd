@@ -17,10 +17,14 @@
     <nav class="max-container">
       <div class="flexCenter p-[10px] relative h-[65px]">
         <a href="/">
-          <img src="assets/images/logo.gif" alt="logo" class="h-[45px]" />
+          <img
+            src="assets/images/Zeus dnp Baru.gif"
+            alt="logo"
+            class="h-[45px]"
+          />
         </a>
-        <a href="" class="absolute right-6">
-          <span class="material-symbols-outlined text-secondary w-[18px]">
+        <a href="" class="absolute right-6 top-1/2 transform -translate-y-1/2">
+          <span class="material-symbols-outlined text-secondary !text-[28px]">
             menu
           </span>
         </a>
@@ -29,15 +33,21 @@
     <!-- server -->
     <section class="max-container bg-hitam">
       <div class="pt-2">
-        <img
-          src="assets/images/Server-Neymar.gif"
-          alt="pilih server"
-          class="w-[358px] h-8 mx-auto"
-        />
-        <div class="py-2 px-[10px] flexCenter">
-          <span
-            class="material-symbols-outlined text-secondary pr-[10px] text-xs"
+        <div class="relative flexCenter">
+          <img
+            src="assets/images/Server polos.gif"
+            alt="pilih server"
+            class="w-[358px] h-[36px] mx-auto"
+          />
+          <p
+            id="undangan-atas"
+            class="uppercase font-bold absolute text-gray-300 text-base font-sans tracking-widest server-gray"
           >
+            Undangan danang & Putri
+          </p>
+        </div>
+        <div class="py-2 px-[10px] flexCenter">
+          <span class="material-symbols-outlined text-secondary pr-[10px]">
             volume_up
           </span>
           <div class="overflow-x-hidden whitespace-nowrap">
@@ -278,6 +288,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const pengumuman = document.getElementById("pengumuman");
+      const undanganAtas = document.getElementById("undangan-atas");
 
       setInterval(function () {
         if (pengumuman.classList.contains("hidden")) {
@@ -295,6 +306,19 @@
           }, 400);
         }
       }, 4000);
+
+      setInterval(function () {
+        if (undanganAtas.classList.contains("text-gray-300")) {
+          undanganAtas.classList.remove("text-gray-300", "server-gray");
+          undanganAtas.classList.add("text-server-gradient", "server-gradient");
+        } else {
+          undanganAtas.classList.remove(
+            "text-server-gradient",
+            "server-gradient"
+          );
+          undanganAtas.classList.add("text-gray-300", "server-gray");
+        }
+      }, 500);
     });
   </script>
 </html>
